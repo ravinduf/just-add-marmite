@@ -4,7 +4,7 @@ import Image from 'next/image';
 const RecipeCard = ({ recipe }) => {
 
   const { title, slug, cookingTIme, thumbnail } = recipe.fields;
-  console.log( cookingTIme )
+  // console.log( cookingTIme )
   // console.log(`https:${thumbnail.fields.file.url}`)
     return (
         <div className="card">
