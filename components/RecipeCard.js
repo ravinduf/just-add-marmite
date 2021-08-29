@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 const RecipeCard = ({ recipe }) => {
 
-  const { title, slug, cookingTIme, thumbnail } = recipe.fields;
-  // console.log( cookingTIme )
+  const { title, slug, cookingTime, thumbnail } = recipe.fields;
+  // console.log( cookingTime )
   // console.log(`https:${thumbnail.fields.file.url}`)
     return (
         <div className="card">
@@ -18,7 +18,7 @@ const RecipeCard = ({ recipe }) => {
           <div className="content">
             <div className="info">
               <h4>{ title }</h4>
-              <p>Takes approx { cookingTIme } mins to make</p>
+              <p>Takes approx { cookingTime } mins to make</p>
             </div>
             <div className="actions">
               <Link href={`/recipes/${slug}`}>
