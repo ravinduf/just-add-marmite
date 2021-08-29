@@ -32,10 +32,13 @@ export const getStaticProps = async (context) => {
     'fields.slug': params.slug
   });
 
+  //  revalidate incremental changes when a user visits the page for the 
+  // 2nd time after revalidate time period page updates
   return {
     props: {
       recipe: items[0]
-    }
+    },
+    revalidate: 1, 
   }
  
 }
