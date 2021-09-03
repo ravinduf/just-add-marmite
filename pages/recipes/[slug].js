@@ -33,6 +33,14 @@ export const getStaticProps = async (context) => {
     'fields.slug': params.slug
   });
 
+  if (!items.length) {
+    return {
+      redirect : { 
+        destination: '/',
+        permanent: false
+      }
+    }
+  }
   //  revalidate incremental changes when a user visits the page for the 
   // 2nd time after revalidate time period page updates
   return {
